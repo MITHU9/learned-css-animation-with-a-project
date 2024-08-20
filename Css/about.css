@@ -251,11 +251,33 @@
   transition: 0.6s ease;
   left: 30%;
 }
-
 .f3-c:hover .f3-text {
   opacity: 1;
   transition: 0.6s ease;
   left: 75%;
+}
+.square1,
+.square2 {
+  top: 0;
+  opacity: 0;
+  transition: 1s ease 0.1s;
+}
+.square1.show {
+  top: 10%;
+  opacity: 1;
+}
+.square2.show {
+  top: -20%;
+  opacity: 1;
+}
+.grid {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 1s ease;
+}
+.grid.show {
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 @media (max-width: 1650px) {

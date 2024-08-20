@@ -5,6 +5,19 @@
   gap: 50px;
   position: relative;
 }
+.contact::before {
+  content: "";
+  width: 30%;
+  height: 500px;
+  border-radius: 50%;
+  background: #4d18d2;
+  position: absolute;
+  top: 0%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  filter: blur(178px);
+}
 .box-contact {
   position: relative;
   width: 400px;
@@ -290,6 +303,35 @@ button:hover {
 .col a:hover {
   color: #2fc0ff;
   transform: scale(1.2);
+}
+
+form {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 1s ease 0.1s;
+}
+form.show {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.footer {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: 1s ease;
+}
+.footer.show {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.logo-show {
+  top: 50%;
+  opacity: 0;
+  transition: 1s ease 0.1s;
+}
+.logo-show.show {
+  top: 25%;
+  opacity: 1;
 }
 
 @media (max-width: 1650px) {

@@ -5,8 +5,24 @@ section {
 .detail {
   position: relative;
 }
+.offer::before {
+  content: "";
+  width: 600px;
+  height: 2000px;
+  border-radius: 50%;
+  background: #14bac2;
+  position: absolute;
+  top: 160%;
+  left: -40%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  filter: blur(200px);
+}
+
 .detail {
-  top: 60px;
+  top: 110px;
+  opacity: 0;
+  transition: 1s ease-in;
 }
 .text-flex,
 .four-box {
@@ -217,6 +233,34 @@ section {
   50% {
     transform: skew(0deg, 15deg) translate(-50%, -60%);
   }
+}
+
+/* Scroll Animation */
+.four-box {
+  transform: translateY(-40px);
+  opacity: 0;
+  transition: 1s ease;
+}
+.four-box.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+.detail.show {
+  opacity: 1;
+  top: 60px;
+}
+.text,
+.text-flex,
+.text-center {
+  transform: translateX(-40px);
+  opacity: 0;
+  transition: 1s ease;
+}
+.text.show,
+.text-flex.show,
+.text-center.show {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 @media (max-width: 1650px) {
